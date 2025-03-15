@@ -1,0 +1,27 @@
+.header {
+	background-color: var(--cv-accent-clr);
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	gap: var(--gap-md);
+	justify-content: center;
+	align-items: center;
+	padding-block: 1rem;
+}
+
+.header .name {
+	font-family: var(--cv-font-bold);
+	font-size: var(--font-md);
+}
+
+.header .personal {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--gap-lg);
+}
+
+.header .personal .item {
+	display: flex;
+	align-items: center;
+	gap: var(--gap-sm);
+}
