@@ -1,3 +1,30 @@
+@font-face {
+	font-family: "NotoSans";
+	src: url("../assets/fonts/NotoSans-Regular.woff") format("woff"),
+		url("../assets/fonts/NotoSans-Regular.woff2") format("woff2");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "NotoSans-Bold";
+	src: url("../assets/fonts/NotoSans-Bold.woff") format("woff"),
+		url("../assets/fonts/NotoSans-Bold.woff2") format("woff2");
+	font-weight: bold;
+}
+
+:root {
+	--grey-clr: #eef1f3;
+	--cv-accent-clr: #0e374e;
+	--cv-font: "NotoSans", sans-serif;
+	--cv-font-bold: "NotoSans-Bold", sans-serif;
+	--font-lg: 3rem;
+	--font-md: 2rem;
+	--font-sm: 1.5rem;
+	--gap-lg: 2rem;
+	--gap-md: 10px;
+	--gap-sm: 5px;
+}
+
 *,
 *::before,
 *::after {
@@ -29,4 +56,5 @@ body {
 	max-width: 1400px;
 	margin-inline: auto;
 	padding: 1rem;
+	font-family: var(--cv-font);
 }
