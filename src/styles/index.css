@@ -13,13 +13,13 @@
 }
 
 :root {
-	--grey-clr: #eef1f3;
+	--grey-clr: #f3f4f6;
 	--cv-accent-clr: #0e374e;
 	--cv-font: "NotoSans", sans-serif;
 	--cv-font-bold: "NotoSans-Bold", sans-serif;
-	--font-lg: 3rem;
-	--font-md: 2rem;
-	--font-sm: 1.5rem;
+	--font-lg: 2rem;
+	--font-md: 1.5rem;
+	--font-sm: 1.2rem;
 	--gap-lg: 2rem;
 	--gap-md: 10px;
 	--gap-sm: 5px;
@@ -55,6 +55,23 @@ body {
 	line-height: 1.5;
 	max-width: 1400px;
 	margin-inline: auto;
-	padding: 1rem;
+	padding: var(--gap-lg);
 	font-family: var(--cv-font);
+	background-color: var(--grey-clr);
+}
+
+.shadow {
+	box-shadow: rgba(99, 99, 110, 0.2) 0px 7px 29px 0px;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 8.27in;
+}
+
+@media (width <= 700px) {
+	.container {
+		grid-template-columns: 1fr;
+		gap: var(--gap-md);
+	}
 }

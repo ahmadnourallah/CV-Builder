@@ -6,18 +6,20 @@
 	gap: var(--gap-md);
 	justify-content: center;
 	align-items: center;
-	padding-block: 1rem;
+	padding: var(--gap-lg);
 }
 
 .header .name {
 	font-family: var(--cv-font-bold);
-	font-size: var(--font-md);
+	font-size: var(--font-lg);
 }
 
 .header .personal {
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--gap-lg);
+	justify-content: center;
+	column-gap: var(--gap-lg);
+	row-gap: var(--gap-md);
 }
 
 .header .personal .item {

@@ -12,7 +12,10 @@ function CanvasBody({ CV }) {
 			}}
 		>
 			<CanvasSection title="Education" items={CV.education} />
-			<CanvasSection title="Experience" items={CV.experience} />
+			<CanvasSection
+				title="Professional Experience"
+				items={CV.experience}
+			/>
 		</div>
 	);
 }
