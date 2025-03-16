@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Aside from "./components/Aside";
 import Canvas from "./components/Canvas";
 
 function App() {
@@ -44,7 +45,15 @@ function App() {
 		],
 	});
 
-	return <Canvas CV={CV} />;
+	return (
+		<div className="container">
+			<Aside />
+
+			<main>
+				<Canvas CV={CV} />
+			</main>
+		</div>
+	);
 }
 
 export default App;
