@@ -12,20 +12,6 @@
 	font-weight: bold;
 }
 
-:root {
-	--grey-clr: #f3f4f6;
-	--outline-clr: #3b83f6;
-	--cv-accent-clr: #0e374e;
-	--cv-font: "NotoSans", sans-serif;
-	--cv-font-bold: "NotoSans-Bold", sans-serif;
-	--font-lg: 2rem;
-	--font-md: 1.5rem;
-	--font-sm: 1.2rem;
-	--gap-lg: 2rem;
-	--gap-md: 10px;
-	--gap-sm: 5px;
-}
-
 *,
 *::before,
 *::after {

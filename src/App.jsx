@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Aside from "./components/Aside";
 import Canvas from "./components/Canvas";
 
@@ -45,14 +45,48 @@ function App() {
 		],
 	});
 
-	return (
-		<div className="container">
-			<Aside />
+	const [customs, setCustoms] = useState({
+		greyClr: "#f3f4f6",
+		outlineClr: "#3b83f6",
+		CVAccentClr: "#0e374e",
+		CVFont: '"NotoSans", sans-serif',
+		CVFontBold: '"NotoSans-Bold", sans-serif',
+		FontLG: "2rem",
+		FontMD: "1.5rem",
+		FontSM: "1.2rem",
+		GapLG: "2rem",
+		GapMD: "10px",
+		GapSM: "5px",
+	});
 
-			<main>
-				<Canvas CV={CV} />
-			</main>
-		</div>
+	const canvasRef = useRef();
+
+	return (
+		<>
+			<style>
+				{`:root {
+					--grey-clr: ${customs.greyClr};
+					--outline-clr: ${customs.outlineClr};
+					--cv-accent-clr: ${customs.CVAccentClr};
+					--cv-font: ${customs.CVFont};
+					--cv-font-bold: ${customs.CVFontBold};
+					--font-lg: ${customs.FontLG};
+					--font-md: ${customs.FontMD};
+					--font-sm: ${customs.FontSM};
+					--gap-lg: ${customs.GapLG};
+					--gap-md: ${customs.GapMD};
+					--gap-sm: ${customs.GapSM};
+				}`}
+			</style>
+
+			<div className="container">
+				<Aside canvasRef={canvasRef} />
+
+				<main>
+					<Canvas canvasRef={canvasRef} CV={CV} />
+				</main>
+			</div>
+		</>
 	);
 }
 
