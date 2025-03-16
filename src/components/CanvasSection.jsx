@@ -1,17 +1,17 @@
 import CanvasSectionItem from "./CanvasSectionItem";
 
-function CanvasSection({ title, items }) {
+function CanvasSection({ customs, title, items }) {
 	if (items.length !== 0) {
 		return (
 			<div className="canvasSection">
 				<h2
 					className="title"
 					style={{
-						padding: "var(--gap-sm)",
+						padding: customs.GapSM,
 						textAlign: "center",
-						color: "var(--cv-accent-clr)",
-						backgroundColor: "var(--grey-clr)",
-						marginBottom: "var(--gap-md)",
+						color: customs.CVAccentClr,
+						backgroundColor: customs.GreyClr,
+						marginBottom: customs.GapMD,
 						borderRadius: "2px",
 					}}
 				>
@@ -22,12 +22,17 @@ function CanvasSection({ title, items }) {
 					style={{
 						display: "flex",
 						flexDirection: "column",
-						gap: "var(--gap-lg)",
+						gap: customs.GapLG,
 					}}
 				>
 					{items.map((item) => {
 						if (item.isVisible) {
-							return <CanvasSectionItem item={item} />;
+							return (
+								<CanvasSectionItem
+									customs={customs}
+									item={item}
+								/>
+							);
 						}
 					})}
 				</div>

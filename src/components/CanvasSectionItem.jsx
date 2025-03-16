@@ -1,4 +1,4 @@
-function CanvasSectionItem({ item }) {
+function CanvasSectionItem({ customs, item }) {
 	return (
 		<div
 			className="item"
@@ -16,7 +16,7 @@ function CanvasSectionItem({ item }) {
 				<h3 className="name" style={{ fontSize: "1rem" }}>
 					{item.name}
 				</h3>
-				<p className="field" style={{ marginBottom: "var(--gap-md)" }}>
+				<p className="field" style={{ marginBottom: customs.GapMD }}>
 					{item.field}
 				</p>
 				{item.description && (
