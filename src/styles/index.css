@@ -98,6 +98,5 @@ h3 {
 @media (width <= 700px) {
 	.container {
 		grid-template-columns: 1fr;
-		gap: var(--gap-md);
 	}
 }
