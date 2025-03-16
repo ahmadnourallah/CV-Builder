@@ -1,0 +1,89 @@
+.collapsible,
+.collapsibleBody {
+	background-color: #fff;
+}
+
+.collapsible {
+	padding: calc(var(--gap-md) * 2);
+	border-radius: 10px 10px 10px 10px;
+	transition: border-radius 200ms linear;
+}
+
+.collapsible.active {
+	border-radius: 10px 10px 0px 0px;
+}
+
+.collapsible .head,
+.collapsible .head .left {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.collapsible .head {
+	justify-content: space-between;
+}
+
+.collapsible .head .left {
+	gap: var(--gap-md);
+}
+
+.collapsible .collapseBtn {
+	background-color: inherit;
+	border: none;
+	border-radius: 50%;
+	height: 35px;
+}
+
+.collapsible .chevron {
+	transition: rotate 200ms;
+}
+
+.collapsible.active .chevron {
+	rotate: 180deg;
+}
+
+.collapsibleBody {
+	border-radius: 0 0 10px 10px;
+	visibility: hidden;
+	overflow: hidden;
+	max-height: 0;
+	transition: visibility 200ms linear, max-height 200ms linear;
+	overflow: hidden;
+	animation: disappear 200ms linear;
+	transform-origin: top;
+}
+
+.collapsibleBody.active {
+	display: block;
+	opacity: 1;
+	visibility: visible;
+	max-height: 500px;
+	transition: visibility 200ms linear, max-height 200ms linear;
+	animation: expand 200ms linear forwards;
+	transform-origin: top;
+}
+
+@keyframes expand {
+	0% {
+		padding: calc(var(--gap-md) * 2);
+		transform: scaleY(0);
+	}
+
+	100% {
+		padding: calc(var(--gap-md) * 2);
+		transform: scaleY(1);
+	}
+}
+
+@keyframes disappear {
+	0% {
+		padding: calc(var(--gap-md) * 2);
+		transform: scaleY(1);
+	}
+
+	100% {
+		padding: calc(var(--gap-md) * 2);
+		transform: scaleY(0);
+	}
+}
