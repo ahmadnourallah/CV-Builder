@@ -46,8 +46,8 @@ function App() {
 	});
 
 	const [customs, setCustoms] = useState({
-		greyClr: "#f3f4f6",
-		outlineClr: "#3b83f6",
+		GreyClr: "#f3f4f6",
+		OutlineClr: "#3b83f6",
 		CVAccentClr: "#0e374e",
 		CVFont: '"NotoSans", sans-serif',
 		CVFontBold: '"NotoSans-Bold", sans-serif',
@@ -65,8 +65,8 @@ function App() {
 		<>
 			<style>
 				{`:root {
-					--grey-clr: ${customs.greyClr};
-					--outline-clr: ${customs.outlineClr};
+					--grey-clr: ${customs.GreyClr};
+					--outline-clr: ${customs.OutlineClr};
 					--cv-accent-clr: ${customs.CVAccentClr};
 					--cv-font: ${customs.CVFont};
 					--cv-font-bold: ${customs.CVFontBold};
@@ -80,7 +80,7 @@ function App() {
 			</style>
 
 			<div className="container">
-				<Aside canvasRef={canvasRef} />
+				<Aside setCustoms={setCustoms} canvasRef={canvasRef} />
 
 				<main>
 					<Canvas canvasRef={canvasRef} CV={CV} />
