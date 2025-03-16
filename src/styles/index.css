@@ -14,6 +14,7 @@
 
 :root {
 	--grey-clr: #f3f4f6;
+	--outline-clr: #3b83f6;
 	--cv-accent-clr: #0e374e;
 	--cv-font: "NotoSans", sans-serif;
 	--cv-font-bold: "NotoSans-Bold", sans-serif;
@@ -51,6 +52,15 @@ select {
 	font: inherit;
 }
 
+button {
+	cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+	outline: 2px solid var(--outline-clr);
+}
+
 body {
 	line-height: 1.5;
 	max-width: 1400px;
@@ -60,6 +70,21 @@ body {
 	background-color: var(--grey-clr);
 }
 
+h1,
+h2,
+h3 {
+	font-family: var(--cv-font-bold);
+}
+
+h1 {
+	font-size: var(--font-lg);
+}
+
+h2,
+h3 {
+	font-size: var(--font-sm);
+}
+
 .shadow {
 	box-shadow: rgba(99, 99, 110, 0.2) 0px 7px 29px 0px;
 }
@@ -67,6 +92,7 @@ body {
 .container {
 	display: grid;
 	grid-template-columns: 1fr 8.27in;
+	gap: var(--gap-lg);
 }
 
 @media (width <= 700px) {

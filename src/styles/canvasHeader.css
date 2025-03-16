@@ -9,11 +9,6 @@
 	padding: var(--gap-lg);
 }
 
-.header .name {
-	font-family: var(--cv-font-bold);
-	font-size: var(--font-lg);
-}
-
 .header .personal {
 	display: flex;
 	flex-wrap: wrap;

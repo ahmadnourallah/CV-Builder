@@ -2,8 +2,6 @@
 	padding: var(--gap-sm);
 	text-align: center;
 	color: var(--cv-accent-clr);
-	font-family: var(--cv-font-bold);
-	font-size: var(--font-sm);
 	background-color: var(--grey-clr);
 	margin-bottom: var(--gap-md);
 	border-radius: 2px;
