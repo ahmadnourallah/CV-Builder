@@ -1,31 +1,42 @@
-import Icon from "@mdi/react";
 import { mdiEmail, mdiPhone, mdiMapMarker } from "@mdi/js";
-import "../styles/canvasHeader.css";
+import CanvasHeaderItem from "./CanvasHeaderItem";
 
 function CanvasHeader({ CV }) {
 	return (
-		<div className="header">
+		<div
+			className="header"
+			style={{
+				backgroundColor: "var(--cv-accent-clr)",
+				color: "#fff",
+				display: "flex",
+				flexDirection: "column",
+				gap: "var(--gap-md)",
+				justifyContent: "center",
+				alignItems: "center",
+				padding: "var(--gap-lg)",
+			}}
+		>
 			<h1 className="name">{CV.name}</h1>
-			<div className="personal">
+			<div
+				className="personal"
+				style={{
+					display: "flex",
+					flexWrap: "wrap",
+					justifyContent: "center",
+					columnGap: "var(--gap-lg)",
+					rowGap: "var(--gap-md)",
+				}}
+			>
 				{CV.email && (
-					<div className="item">
-						<Icon path={mdiEmail} size="20px" color="#FFF" />
-						<span>{CV.email}</span>
-					</div>
+					<CanvasHeaderItem icon={mdiEmail} text={CV.email} />
 				)}
 
 				{CV.phone && (
-					<div className="item">
-						<Icon path={mdiPhone} size="20px" color="#FFF" />
-						<span>{CV.phone}</span>
-					</div>
+					<CanvasHeaderItem icon={mdiPhone} text={CV.phone} />
 				)}
 
 				{CV.address && (
-					<div className="item">
-						<Icon path={mdiMapMarker} size="20px" color="#FFF" />
-						<span>{CV.address}</span>
-					</div>
+					<CanvasHeaderItem icon={mdiMapMarker} text={CV.address} />
 				)}
 			</div>
 		</div>
