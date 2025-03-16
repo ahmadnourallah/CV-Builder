@@ -10,7 +10,6 @@ function getClassNames(node) {
 function extractCSS(node) {
 	// Collect class names for a DOM subtree
 	// Works for styled-components and CSS modules (anything based on CSS classes)
-	console.log(getClassNames(node));
 	const classNames = getClassNames(node)
 		.filter((item) => typeof item === "string")
 		.map((name) => name.split(" "))
