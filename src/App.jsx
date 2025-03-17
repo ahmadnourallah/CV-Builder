@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Aside from "./components/Aside";
 import Canvas from "./components/Canvas";
 
@@ -60,8 +60,6 @@ function App() {
 		GapSM: "4pt",
 	});
 
-	const canvasRef = useRef();
-
 	return (
 		<>
 			<style>
@@ -81,10 +79,10 @@ function App() {
 			</style>
 
 			<div className="container">
-				<Aside setCustoms={setCustoms} canvasRef={canvasRef} />
+				<Aside setCustoms={setCustoms} />
 
 				<main>
-					<Canvas canvasRef={canvasRef} CV={CV} />
+					<Canvas customs={customs} CV={CV} />
 				</main>
 			</div>
 		</>
