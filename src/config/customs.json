@@ -1,0 +1,14 @@
+{
+	"GreyClr": "#f3f4f6",
+	"OutlineClr": "#3b83f6",
+	"CVAccentClr": "#0e374e",
+	"CVFont": "\"NotoSans\", sans-serif",
+	"CVFontBold": "\"NotoSans-Bold\", sans-serif",
+	"FontLG": "24pt",
+	"FontMD": "18pt",
+	"FontSM": "13.5pt",
+	"FontBody": "12pt",
+	"GapLG": "24pt",
+	"GapMD": "7.5pt",
+	"GapSM": "4pt"
+}
