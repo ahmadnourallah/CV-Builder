@@ -42,8 +42,20 @@ button {
 	cursor: pointer;
 }
 
-button:focus-visible,
-input:focus-visible {
+input {
+	outline: none;
+	border-width: 2px;
+	border-style: solid;
+	border-color: transparent;
+	transition: border 200ms, box-shadow 200ms;
+}
+
+input:focus {
+	border-color: var(--outline-clr);
+	box-shadow: #7dafff 0px 0px 5px 0px;
+}
+
+button:focus-visible {
 	outline: 2px solid var(--outline-clr);
 }
 
