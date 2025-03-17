@@ -71,6 +71,11 @@ h3 {
 	font-size: var(--font-sm);
 }
 
+.card {
+	padding: calc(var(--gap-md) * 2);
+	border-radius: 10px;
+}
+
 .shadow {
 	box-shadow: rgba(99, 99, 110, 0.2) 0px 7px 29px 0px;
 }

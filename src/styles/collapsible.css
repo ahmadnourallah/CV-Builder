@@ -4,8 +4,6 @@
 }
 
 .collapsible {
-	padding: calc(var(--gap-md) * 2);
-	border-radius: 10px 10px 10px 10px;
 	transition: border-radius 200ms linear;
 }
 

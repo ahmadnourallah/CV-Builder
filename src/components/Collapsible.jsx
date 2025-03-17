@@ -22,7 +22,7 @@ function Collapsible({
 	return (
 		<div>
 			<div
-				className={`collapsible shadow ${
+				className={`card collapsible shadow ${
 					activeIndex === index ? "active" : ""
 				}`}
 				ref={collapsibleRef}
