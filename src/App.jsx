@@ -51,12 +51,13 @@ function App() {
 		CVAccentClr: "#0e374e",
 		CVFont: '"NotoSans", sans-serif',
 		CVFontBold: '"NotoSans-Bold", sans-serif',
-		FontLG: "2rem",
-		FontMD: "1.5rem",
-		FontSM: "1.2rem",
-		GapLG: "2rem",
-		GapMD: "10px",
-		GapSM: "5px",
+		FontLG: "24pt",
+		FontMD: "18pt",
+		FontSM: "13.5pt",
+		FontBody: "12pt",
+		GapLG: "24pt",
+		GapMD: "7.5pt",
+		GapSM: "4pt",
 	});
 
 	const canvasRef = useRef();
