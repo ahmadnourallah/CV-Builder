@@ -12,6 +12,7 @@ function Canvas({ customs, CV, canvasRef }) {
 				gap: customs.GapLG,
 				maxWidth: "8.27in",
 				minHeight: "11.67in",
+				fontSize: customs.FontBody,
 				backgroundColor: "#FFF",
 			}}
 		>
