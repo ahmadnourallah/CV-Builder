@@ -27,8 +27,6 @@
 }
 
 .collapsible .collapseBtn {
-	background-color: inherit;
-	border: none;
 	border-radius: 50%;
 	height: 35px;
 }

@@ -64,6 +64,8 @@ button:focus-visible {
 }
 
 button {
+	border: none;
+	background-color: inherit;
 	filter: saturate(100%);
 	transition: filter 200ms;
 }
