@@ -48,6 +48,10 @@ input {
 	border-style: solid;
 	border-color: transparent;
 	transition: border 200ms, box-shadow 200ms;
+	background-color: var(--grey-clr);
+	font-size: 12px;
+	padding: var(--gap-md);
+	border-radius: 10px;
 }
 
 input:focus {
