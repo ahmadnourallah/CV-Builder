@@ -59,6 +59,15 @@ button:focus-visible {
 	outline: 2px solid var(--outline-clr);
 }
 
+button {
+	filter: saturate(100%);
+	transition: filter 200ms;
+}
+
+button:hover {
+	filter: saturate(50%);
+}
+
 body {
 	line-height: 1.5;
 	max-width: 1400px;
