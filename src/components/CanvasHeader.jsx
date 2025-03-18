@@ -1,19 +1,19 @@
 import { mdiEmail, mdiPhone, mdiMapMarker } from "@mdi/js";
 import CanvasHeaderItem from "./CanvasHeaderItem";
 
-function CanvasHeader({ customs, CV }) {
+function CanvasHeader({ CV }) {
 	return (
 		<div
 			className="header"
 			style={{
-				backgroundColor: customs.CVAccentClr,
+				backgroundColor: "var(--cv-accent-clr)",
 				color: "#fff",
 				display: "flex",
 				flexDirection: "column",
-				gap: customs.GapMD,
+				gap: "var(--gap-md)",
 				justifyContent: "center",
 				alignItems: "center",
-				padding: customs.GapLG,
+				padding: "var(--gap-lg)",
 			}}
 		>
 			<h1 className="name">{CV.name}</h1>
@@ -23,32 +23,20 @@ function CanvasHeader({ customs, CV }) {
 					display: "flex",
 					flexWrap: "wrap",
 					justifyContent: "center",
-					columnGap: customs.GapLG,
-					rowGap: customs.GapMD,
+					columnGap: "var(--gap-lg)",
+					rowGap: "var(--gap-md)",
 				}}
 			>
 				{CV.email && (
-					<CanvasHeaderItem
-						customs={customs}
-						icon={mdiEmail}
-						text={CV.email}
-					/>
+					<CanvasHeaderItem icon={mdiEmail} text={CV.email} />
 				)}
 
 				{CV.phone && (
-					<CanvasHeaderItem
-						customs={customs}
-						icon={mdiPhone}
-						text={CV.phone}
-					/>
+					<CanvasHeaderItem icon={mdiPhone} text={CV.phone} />
 				)}
 
 				{CV.address && (
-					<CanvasHeaderItem
-						customs={customs}
-						icon={mdiMapMarker}
-						text={CV.address}
-					/>
+					<CanvasHeaderItem icon={mdiMapMarker} text={CV.address} />
 				)}
 			</div>
 		</div>

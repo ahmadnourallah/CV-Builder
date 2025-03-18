@@ -1,23 +1,22 @@
 import CanvasHeader from "./CanvasHeader";
 import CanvasBody from "./CanvasBody";
 
-function Canvas({ customs, CV, canvasRef }) {
+function Canvas({ CV }) {
 	return (
 		<div
-			ref={canvasRef}
 			className="canvas shadow"
 			style={{
 				display: "flex",
 				flexDirection: "column",
-				gap: customs.GapLG,
+				gap: "var(--gap-lg)",
 				maxWidth: "8.27in",
 				minHeight: "11.67in",
-				fontSize: customs.FontBody,
+				fontSize: "var(--font-body)",
 				backgroundColor: "#FFF",
 			}}
 		>
-			<CanvasHeader customs={customs} CV={CV} />
-			<CanvasBody customs={customs} CV={CV} />
+			<CanvasHeader CV={CV} />
+			<CanvasBody CV={CV} />
 		</div>
 	);
 }

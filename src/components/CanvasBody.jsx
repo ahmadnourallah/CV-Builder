@@ -1,6 +1,6 @@
 import CanvasSection from "./CanvasSection";
 
-function CanvasBody({ customs, CV }) {
+function CanvasBody({ CV }) {
 	return (
 		<div
 			className="canvasBody"
@@ -8,16 +8,11 @@ function CanvasBody({ customs, CV }) {
 				marginInline: "3rem",
 				display: "flex",
 				flexDirection: "column",
-				gap: customs.GapLG,
+				gap: "var(--gap-lg)",
 			}}
 		>
+			<CanvasSection title="Education" items={CV.education} />
 			<CanvasSection
-				customs={customs}
-				title="Education"
-				items={CV.education}
-			/>
-			<CanvasSection
-				customs={customs}
 				title="Professional Experience"
 				items={CV.experience}
 			/>
@@ -27,7 +22,7 @@ function CanvasBody({ customs, CV }) {
 					@media (width <= 700px) {
 						.canvasSection .body .item {
 							grid-template-columns: 1fr !important;
-							gap: ${customs.GapMD};
+							gap: var(--gap-md);
 						}
 					}					
 				`}

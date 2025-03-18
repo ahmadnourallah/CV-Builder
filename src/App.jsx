@@ -20,6 +20,7 @@ function App() {
 					--font-lg: ${customs.FontLG};
 					--font-md: ${customs.FontMD};
 					--font-sm: ${customs.FontSM};
+					--font-body: ${customs.FontBody};
 					--gap-lg: ${customs.GapLG};
 					--gap-md: ${customs.GapMD};
 					--gap-sm: ${customs.GapSM};
@@ -27,10 +28,10 @@ function App() {
 			</style>
 
 			<div className="container">
-				<Aside setCustoms={setCustoms} />
+				<Aside customs={customs} setCustoms={setCustoms} CV={CV} setCV={setCV} />
 
 				<main>
-					<Canvas customs={customs} CV={CV} />
+					<Canvas CV={CV} />
 				</main>
 			</div>
 		</>

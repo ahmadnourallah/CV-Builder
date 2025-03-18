@@ -1,13 +1,13 @@
 import Icon from "@mdi/react";
 
-function CanvasHeaderItem({ customs, icon, text }) {
+function CanvasHeaderItem({ icon, text }) {
 	return (
 		<div
 			className="item"
 			style={{
 				display: "flex",
 				alignItems: "center",
-				gap: customs.GapSM,
+				gap: "var(--gap-sm)",
 			}}
 		>
 			<Icon path={icon} size="20px" color="#FFF" />
