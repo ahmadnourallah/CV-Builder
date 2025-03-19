@@ -1,0 +1,54 @@
+@keyframes spin {
+	from {
+		rotate: 0deg;
+	}
+	to {
+		rotate: 360deg;
+	}
+}
+
+.spinner {
+	position: relative;
+	width: var(--size);
+	height: var(--size);
+	border-radius: 50%;
+	display: grid;
+	place-content: center;
+	font-size: var(--font-md);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.spinner::after {
+		content: "";
+		position: absolute;
+		top: calc((var(--size) / 10) * -1);
+		left: calc((var(--size) / 10) * -1);
+		border: calc(var(--size) / 10) solid #606f7b;
+		width: var(--size);
+		height: var(--size);
+		border-radius: 50%;
+		clip-path: inset(0 12.857% 77% 12.857% round 0 0 5.714% 5.714%);
+	}
+
+	.spinner {
+		border: calc(var(--size) / 10) solid #dae1e7;
+		animation: spin infinite 800ms linear;
+	}
+
+	/* Hide message visually while keeping it accessible to screen readers */
+	.spinner .message {
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		width: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.spinner::after {
+		animation: spin infinite 800ms linear;
+	}
+}
