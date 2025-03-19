@@ -185,15 +185,15 @@ function Body({ customs, styles, CV }) {
 	);
 }
 
-function PDFDocument({ customs, CV }) {
+export const PDFDocument = ({ customs, CV }) => {
 	Font.register({
 		family: "NotoSans",
-		src: "../src/assets/fonts/NotoSans-Regular.woff",
+		src: "../assets/fonts/NotoSans-Regular.woff",
 	});
 
 	Font.register({
 		family: "NotoSans-Bold",
-		src: "../src/assets/fonts/NotoSans-Bold.woff",
+		src: "../assets/fonts/NotoSans-Bold.woff",
 	});
 
 	const styles = StyleSheet.create({
@@ -228,6 +228,4 @@ function PDFDocument({ customs, CV }) {
 			</Page>
 		</Document>
 	);
-}
-
-export default PDFDocument;
+};
