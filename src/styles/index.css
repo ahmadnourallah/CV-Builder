@@ -103,6 +103,16 @@ h3 {
 	border-radius: 10px;
 }
 
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+}
+
 .shadow {
 	box-shadow: rgba(99, 99, 110, 0.2) 0px 7px 29px 0px;
 }
