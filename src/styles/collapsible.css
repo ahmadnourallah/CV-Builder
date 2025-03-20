@@ -63,6 +63,10 @@
 	transform-origin: top;
 }
 
+.collapsibleBody > * {
+	width: 100%;
+}
+
 @keyframes expand {
 	0% {
 		padding: calc(var(--gap-md) * 2);
