@@ -48,6 +48,9 @@
 	overflow: hidden;
 	animation: disappear 200ms linear;
 	transform-origin: top;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .collapsibleBody.active {
