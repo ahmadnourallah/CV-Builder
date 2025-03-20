@@ -1,8 +1,9 @@
 import Collapsible from "./Collapsible";
 import { mdiInformationBox, mdiSchool, mdiBriefcaseVariant } from "@mdi/js";
 import { useState } from "react";
+import DownloadPDFCard from "./DownloadPDFCard";
 
-function Aside() {
+function Aside({ customs, setCustoms, CV, setCV }) {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	return (
@@ -13,15 +14,15 @@ function Aside() {
 				gap: "var(--gap-lg)",
 			}}
 		>
+			<DownloadPDFCard customs={customs} CV={CV} />
+
 			<Collapsible
 				title="Personal Details"
 				icon={mdiInformationBox}
 				index={0}
 				activeIndex={activeIndex}
 				setActiveIndex={setActiveIndex}
-			>
-				<p>Test</p>
-			</Collapsible>
+			></Collapsible>
 
 			<Collapsible
 				index={1}
@@ -29,9 +30,7 @@ function Aside() {
 				activeIndex={activeIndex}
 				setActiveIndex={setActiveIndex}
 				title="Education"
-			>
-				Test
-			</Collapsible>
+			></Collapsible>
 
 			<Collapsible
 				index={2}
@@ -39,9 +38,7 @@ function Aside() {
 				activeIndex={activeIndex}
 				setActiveIndex={setActiveIndex}
 				title="Experience"
-			>
-				Test
-			</Collapsible>
+			></Collapsible>
 		</aside>
 	);
 }
