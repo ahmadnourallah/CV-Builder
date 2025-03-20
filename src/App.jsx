@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { useImmer } from "use-immer";
 import Aside from "./components/Aside";
 import Canvas from "./components/Canvas";
 import customsData from "./config/customs.json";
 import exampleData from "./config/example.json";
 
 function App() {
-	const [CV, setCV] = useState(exampleData);
+	const [CV, setCV] = useImmer(exampleData);
 	const [customs, setCustoms] = useState(customsData);
 
 	return (
@@ -28,7 +29,12 @@ function App() {
 			</style>
 
 			<div className="container">
-				<Aside customs={customs} setCustoms={setCustoms} CV={CV} setCV={setCV} />
+				<Aside
+					customs={customs}
+					setCustoms={setCustoms}
+					CV={CV}
+					setCV={setCV}
+				/>
 
 				<main>
 					<Canvas CV={CV} />

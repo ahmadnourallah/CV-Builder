@@ -11,7 +11,11 @@ function PersonalForm({ CV, setCV }) {
 				<input
 					type="text"
 					value={CV.name}
-					onChange={(e) => setCV({ ...CV, name: e.target.value })}
+					onChange={(e) =>
+						setCV((draft) => {
+							draft.name = e.target.value;
+						})
+					}
 				/>
 			</InputGroup>
 
@@ -19,7 +23,11 @@ function PersonalForm({ CV, setCV }) {
 				<input
 					type="email"
 					value={CV.email}
-					onChange={(e) => setCV({ ...CV, email: e.target.value })}
+					onChange={(e) =>
+						setCV((draft) => {
+							draft.email = e.target.value;
+						})
+					}
 				/>
 			</InputGroup>
 
@@ -27,7 +35,11 @@ function PersonalForm({ CV, setCV }) {
 				<input
 					type="tel"
 					value={CV.phone}
-					onChange={(e) => setCV({ ...CV, phone: e.target.value })}
+					onChange={(e) =>
+						setCV((draft) => {
+							draft.phone = e.target.value;
+						})
+					}
 				/>
 			</InputGroup>
 
@@ -35,7 +47,11 @@ function PersonalForm({ CV, setCV }) {
 				<input
 					type="text"
 					value={CV.address}
-					onChange={(e) => setCV({ ...CV, address: e.target.value })}
+					onChange={(e) =>
+						setCV((draft) => {
+							draft.address = e.target.value;
+						})
+					}
 				/>
 			</InputGroup>
 		</form>
