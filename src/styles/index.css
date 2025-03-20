@@ -31,6 +31,11 @@ svg {
 	max-width: 100%;
 }
 
+ul {
+	list-style: none;
+	padding-inline-start: 0;
+}
+
 input,
 button,
 textarea,
