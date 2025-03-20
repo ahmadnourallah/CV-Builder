@@ -1,7 +1,9 @@
 import CanvasSectionItem from "./CanvasSectionItem";
 
 function CanvasSection({ title, items }) {
-	if (items.length !== 0) {
+	const isAnyItemVisible = items.some((item) => item.isVisible);
+
+	if (items.length !== 0 && isAnyItemVisible) {
 		return (
 			<div className="canvasSection">
 				<h2

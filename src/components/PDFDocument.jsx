@@ -120,7 +120,9 @@ function SectionItem({ customs, item }) {
 }
 
 function Section({ customs, styles, title, items }) {
-	if (items.length !== 0) {
+	const isAnyItemVisible = items.some((item) => item.isVisible);
+
+	if (items.length !== 0 && isAnyItemVisible) {
 		return (
 			<View className="canvasSection">
 				<Text
