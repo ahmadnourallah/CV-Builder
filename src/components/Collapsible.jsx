@@ -16,7 +16,11 @@ function Collapsible({
 	const collapse = () => {
 		collapsibleRef.current.classList.toggle("active");
 		if (index === activeIndex) setActiveIndex(null);
-		else setActiveIndex(index);
+		else {
+			setActiveIndex(index);
+			// Wait until the scale animation is done before scrolling
+			setTimeout(() => collapsibleRef.current.scrollIntoView(), 215);
+		}
 	};
 
 	return (
