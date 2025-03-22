@@ -36,7 +36,12 @@
 }
 
 .collapsible .chevron {
-	transition: rotate 200ms;
+	border-radius: 50%;
+	transition: rotate 200ms, background-color 200ms;
+}
+
+.collapsible .chevron:hover {
+	background-color: var(--grey-clr);
 }
 
 .collapsible.active .chevron {
