@@ -9,6 +9,7 @@ function CanvasBody({ CV }) {
 				display: "flex",
 				flexDirection: "column",
 				gap: "var(--gap-lg)",
+				marginBottom: "var(--gap-lg)",
 			}}
 		>
 			<CanvasSection title="Education" items={CV.education} />

@@ -46,6 +46,7 @@ function Header({ customs, styles, CV }) {
 				justifyContent: "center",
 				alignItems: "center",
 				padding: customs.GapLG,
+				marginTop: `-${customs.GapLG}`,
 			}}
 		>
 			<Text className="name" style={styles.h1}>
@@ -93,6 +94,7 @@ function SectionItem({ customs, item }) {
 	return (
 		<View
 			className="item"
+			wrap={false}
 			style={{
 				display: "flex",
 				flexDirection: "row",
@@ -201,6 +203,8 @@ export const PDFDocument = ({ customs, CV }) => {
 	const styles = StyleSheet.create({
 		page: {
 			margin: 0,
+			paddingTop: customs.GapLG,
+			paddingBottom: customs.GapLG,
 			fontFamily: "NotoSans",
 			fontSize: customs.FontBody,
 		},
