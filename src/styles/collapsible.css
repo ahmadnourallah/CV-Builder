@@ -1,34 +1,38 @@
-.collapsible,
-.collapsibleBody {
-	background-color: #fff;
-}
-
 .collapsible {
-	transition: border-radius 200ms linear;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	padding: 0;
 }
 
 .collapsible.active {
-	border-radius: 10px 10px 0px 0px;
+	padding-bottom: calc(var(--gap-md) * 2);
+	gap: var(--gap-sm);
 }
 
-.collapsible .head,
-.collapsible .head .left {
+.collapsible .collapsibleHead {
+	cursor: pointer;
+	border-radius: 10px;
+	outline-offset: -2px;
+	transition: border-radius 200ms;
+	padding: calc(var(--gap-md) * 2);
+	justify-content: space-between;
+}
+
+.collapsible.active .collapsibleHead {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.collapsible .collapsibleHead,
+.collapsible .collapsibleHead .left {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 }
 
-.collapsible .head {
-	justify-content: space-between;
-}
-
-.collapsible .head .left {
+.collapsible .collapsibleHead .left {
 	gap: var(--gap-md);
-}
-
-.collapsible .collapseBtn {
-	border-radius: 50%;
-	height: 35px;
 }
 
 .collapsible .chevron {
@@ -39,28 +43,23 @@
 	rotate: 180deg;
 }
 
-.collapsibleBody {
-	border-radius: 0 0 10px 10px;
+.collapsible .collapsibleBody {
 	visibility: hidden;
+	transition: visibility 200ms linear,
+		max-height 200ms cubic-bezier(0, 1, 0, 1);
 	overflow: hidden;
-	max-height: 0;
-	transition: visibility 200ms linear, max-height 200ms linear;
-	overflow: hidden;
-	animation: disappear 200ms linear;
+	animation: disappear 200ms linear forwards;
 	transform-origin: top;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 }
 
-.collapsibleBody.active {
-	display: block;
-	opacity: 1;
+.collapsible.active .collapsibleBody {
 	visibility: visible;
-	max-height: 500px;
-	transition: visibility 200ms linear, max-height 200ms linear;
-	animation: expand 200ms linear forwards;
+	animation: expand 200ms linear backwards;
 	transform-origin: top;
+}
+
+.collapsible .collapsibleBody:not(:has(.collapsibleList)) {
+	padding: 0 calc(var(--gap-md) * 2);
 }
 
 .collapsibleBody > * {
@@ -69,24 +68,20 @@
 
 @keyframes expand {
 	0% {
-		padding: calc(var(--gap-md) * 2);
 		transform: scaleY(0);
 	}
 
 	100% {
-		padding: calc(var(--gap-md) * 2);
 		transform: scaleY(1);
 	}
 }
 
 @keyframes disappear {
 	0% {
-		padding: calc(var(--gap-md) * 2);
 		transform: scaleY(1);
 	}
 
 	100% {
-		padding: calc(var(--gap-md) * 2);
 		transform: scaleY(0);
 	}
 }

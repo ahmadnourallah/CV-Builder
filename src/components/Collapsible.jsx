@@ -1,6 +1,7 @@
 import Icon from "@mdi/react";
 import { mdiChevronDown } from "@mdi/js";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { handleEnter } from "../utils/keyboard";
 import "../styles/collapsible.css";
 
 function Collapsible({
@@ -11,47 +12,70 @@ function Collapsible({
 	setActiveIndex,
 	children,
 }) {
+	const isActive = activeIndex === index;
+	const [maxHeight, setMaxHeight] = useState(0);
 	const collapsibleRef = useRef();
+	const collapsibleBodyRef = useRef();
+
+	const getHeight = (element) => {
+		return (
+			Array.from(element.children).reduce(
+				(height, child) => height + child.scrollHeight,
+				0
+			) + element.scrollHeight
+		);
+	};
+
+	useEffect(() => {
+		if (isActive) setMaxHeight(getHeight(collapsibleBodyRef.current));
+		else setMaxHeight(0);
+	}, [isActive]);
 
 	const collapse = () => {
-		collapsibleRef.current.classList.toggle("active");
-		if (index === activeIndex) setActiveIndex(null);
-		else {
+		if (isActive) {
+			setActiveIndex(null);
+			setMaxHeight(0);
+		} else {
 			setActiveIndex(index);
-			// Wait until the scale animation is done before scrolling
-			setTimeout(() => collapsibleRef.current.scrollIntoView(), 215);
+			setMaxHeight(getHeight(collapsibleBodyRef.current));
+
+			// Wait until the scale animation ends before scrolling
+			setTimeout(() => {
+				collapsibleRef.current.scrollIntoView();
+			}, 220);
 		}
 	};
 
 	return (
-		<div>
+		<div
+			className={`card collapsible ${isActive ? "active" : ""}`}
+			ref={collapsibleRef}
+		>
 			<div
-				className={`card collapsible shadow ${
-					activeIndex === index ? "active" : ""
-				}`}
-				ref={collapsibleRef}
+				onClick={collapse}
+				tabIndex="0"
+				onKeyDown={handleEnter}
+				className="collapsibleHead focusOutline"
 			>
-				<div className="head">
-					<div className="left">
-						<Icon path={icon} size="30px" />
-						<h2 className="title">{title}</h2>
-					</div>
-					<div className="right">
-						<button className="collapseBtn" onClick={collapse}>
-							<Icon
-								path={mdiChevronDown}
-								className="chevron"
-								size="25px"
-							/>
-						</button>
-					</div>
+				<div className="left">
+					<Icon path={icon} size="30px" />
+					<h2 className="title">{title}</h2>
+				</div>
+				<div className="right">
+					<Icon
+						path={mdiChevronDown}
+						className="chevron"
+						size="25px"
+					/>
 				</div>
 			</div>
-
 			<div
-				className={`collapsibleBody ${
-					activeIndex === index ? "active" : ""
-				}`}
+				ref={collapsibleBodyRef}
+				// Calculate a max height bigger than can ever be needed.
+				// This fixes overflow when a switcher is used to display a component with
+				// a larger height.
+				style={{ maxHeight: `calc(${maxHeight}px * pow(10,10))` }}
+				className="collapsibleBody"
 			>
 				{children}
 			</div>
