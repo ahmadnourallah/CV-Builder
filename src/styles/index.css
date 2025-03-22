@@ -51,7 +51,8 @@ button {
 	cursor: pointer;
 }
 
-input {
+input,
+textarea {
 	outline: none;
 	border-width: 2px;
 	border-style: solid;
@@ -63,12 +64,17 @@ input {
 	border-radius: 10px;
 }
 
+textarea {
+	resize: vertical;
+}
+
 input:focus {
 	border-color: var(--outline-clr);
 	box-shadow: #7dafff 0px 0px 5px 0px;
 }
 
-button:focus-visible {
+button:focus,
+.focusOutline:focus {
 	outline: 2px solid var(--outline-clr);
 }
 
