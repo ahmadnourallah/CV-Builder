@@ -40,7 +40,9 @@ function InputGroup({ label, tip, children }) {
 						gap: "var(--gap-md)",
 					}}
 				>
-					{children.map((child) => cloneElement(child, { id }))}
+					{children.map((child, index) =>
+						cloneElement(child, { key: index, id })
+					)}
 				</div>
 			) : (
 				cloneElement(children, { id })

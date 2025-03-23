@@ -27,9 +27,11 @@ function CanvasSection({ title, items }) {
 						gap: "var(--gap-lg)",
 					}}
 				>
-					{items.map((item) => {
+					{items.map((item, index) => {
 						if (item.isVisible) {
-							return <CanvasSectionItem item={item} />;
+							return (
+								<CanvasSectionItem key={index} item={item} />
+							);
 						}
 					})}
 				</div>
