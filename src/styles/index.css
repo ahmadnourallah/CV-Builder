@@ -51,7 +51,7 @@ button {
 	cursor: pointer;
 }
 
-input,
+input:not([type="checkbox"]),
 textarea {
 	outline: none;
 	border-width: 2px;
@@ -68,10 +68,14 @@ textarea {
 	resize: vertical;
 }
 
-input:focus-visible,
+input:not([type="checkbox"]):focus-visible,
 textarea:focus-visible {
 	border-color: var(--outline-clr);
 	box-shadow: #7dafff 0px 0px 5px 0px;
+}
+
+input:not([type="checkbox"]):disabled {
+	background-color: rgb(0 0 0 / 0.2);
 }
 
 button:focus-visible,
