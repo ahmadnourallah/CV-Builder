@@ -21,7 +21,21 @@ function InputGroup({ label, children }) {
 			>
 				{label}
 			</label>
-			{cloneElement(children, { id })}
+
+			{Array.isArray(children) ? (
+				<div
+					className="inputWrapper"
+					style={{
+						display: "flex",
+						alignItems: "center",
+						gap: "var(--gap-md)",
+					}}
+				>
+					{children.map((child) => cloneElement(child, { id }))}
+				</div>
+			) : (
+				cloneElement(children, { id })
+			)}
 		</div>
 	);
 }
