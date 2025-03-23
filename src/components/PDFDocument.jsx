@@ -102,7 +102,8 @@ function SectionItem({ customs, item }) {
 		>
 			<View className="leftCol" style={{ flex: 1 }}>
 				<Text>
-					{item.startDate} - {item.endDate}
+					{item.startDate.split("-").reverse().join("/")} -{" "}
+					{item.endDate.split("-").reverse().join("/")}
 				</Text>
 				<Text>{item.location}</Text>
 			</View>

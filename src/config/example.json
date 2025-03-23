@@ -9,7 +9,7 @@
 			"isVisible": true,
 			"name": "Hidden University",
 			"field": "Master's Degree in Math",
-			"startDate": "08/2020",
+			"startDate": "2020-08",
 			"endDate": "present",
 			"location": "New York City, US"
 		}
@@ -20,7 +20,7 @@
 			"isVisible": true,
 			"name": "Umbrella Inc.",
 			"field": "UX & UI Designer",
-			"startDate": "08/2020",
+			"startDate": "2020-08",
 			"endDate": "present",
 			"location": "New York City, US",
 			"description": "Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android"
@@ -30,8 +30,8 @@
 			"isVisible": true,
 			"name": "Black Mesa Labs",
 			"field": "UX Research Assistant",
-			"startDate": "04/2018",
-			"endDate": "02/2019",
+			"startDate": "2018-04",
+			"endDate": "2019-02",
 			"location": "Berlin, Germany",
 			"description": "Supported senior researchers on accessibility standards for the open web. Created and usability tested wireframes and prototypes. Produced interactive documentation for quick onboarding of new researchers."
 		}
