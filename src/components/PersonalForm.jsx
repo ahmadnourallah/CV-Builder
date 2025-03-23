@@ -7,8 +7,9 @@ function PersonalForm({ CV, setCV }) {
 			action="#"
 			onSubmit={(e) => e.preventDefault()}
 		>
-			<InputGroup label={"Full Name"}>
+			<InputGroup label={"Full Name"} tip={"required"}>
 				<input
+					required
 					type="text"
 					value={CV.name}
 					onChange={(e) =>
@@ -19,8 +20,9 @@ function PersonalForm({ CV, setCV }) {
 				/>
 			</InputGroup>
 
-			<InputGroup label={"Email"}>
+			<InputGroup label={"Email"} tip={"required"}>
 				<input
+					required
 					type="email"
 					value={CV.email}
 					onChange={(e) =>
@@ -31,8 +33,9 @@ function PersonalForm({ CV, setCV }) {
 				/>
 			</InputGroup>
 
-			<InputGroup label={"Phone Number"}>
+			<InputGroup label={"Phone Number"} tip={"required"}>
 				<input
+					required
 					type="tel"
 					value={CV.phone}
 					onChange={(e) =>
@@ -43,8 +46,9 @@ function PersonalForm({ CV, setCV }) {
 				/>
 			</InputGroup>
 
-			<InputGroup label={"Address"}>
+			<InputGroup label={"Address"} tip={"required"}>
 				<input
+					required
 					type="text"
 					value={CV.address}
 					onChange={(e) =>

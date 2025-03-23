@@ -1,6 +1,6 @@
 import { cloneElement } from "react";
 
-function InputGroup({ label, children }) {
+function InputGroup({ label, tip, children }) {
 	const id = crypto.randomUUID();
 
 	return (
@@ -20,6 +20,15 @@ function InputGroup({ label, children }) {
 				}}
 			>
 				{label}
+				<span
+					style={{
+						color: "#9ca3af",
+						fontSize: "13px",
+						marginLeft: "var(--gap-sm)",
+					}}
+				>
+					{tip}
+				</span>
 			</label>
 
 			{Array.isArray(children) ? (
