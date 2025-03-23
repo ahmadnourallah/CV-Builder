@@ -42,7 +42,7 @@ function Collapsible({
 			// Wait until the scale animation ends before scrolling
 			setTimeout(() => {
 				collapsibleRef.current.scrollIntoView();
-			}, 220);
+			}, 250);
 		}
 	};
 
