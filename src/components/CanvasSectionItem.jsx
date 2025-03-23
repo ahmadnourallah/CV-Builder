@@ -8,8 +8,10 @@ function CanvasSectionItem({ item }) {
 			}}
 		>
 			<div className="leftCol">
-				{item.startDate.split("-").reverse().join("/")} -{" "}
-				{item.endDate.split("-").reverse().join("/")}
+				{item.startDate &&
+					item.startDate.split("-").reverse().join("/")}{" "}
+				{item.startDate && item.endDate && "-"}{" "}
+				{item.endDate && item.endDate.split("-").reverse().join("/")}
 				<br />
 				{item.location}
 			</div>
