@@ -1,0 +1,24 @@
+.visibleBtn {
+	background-color: transparent;
+	border-radius: 50%;
+}
+
+.addBtnWrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: var(--gap-lg);
+}
+
+.addBtn:focus-visible {
+	border-color: var(--outline-clr) !important;
+	outline: none;
+}
+
+.addBtn {
+	transition: background-color 150ms;
+}
+
+.addBtn:hover {
+	background-color: var(--grey-clr);
+}
