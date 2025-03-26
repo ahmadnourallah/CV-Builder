@@ -1,7 +1,7 @@
 import { wrap } from "comlink";
 import { saveAs } from "file-saver";
 import { useState } from "react";
-import Button from "./Button";
+import ActionButton from "./ActionButton";
 import Spinner from "./Spinner";
 import Worker from "../workers/renderPDF.worker?worker";
 
@@ -49,7 +49,9 @@ function DownloadPDFCard({ customs, CV }) {
 				</div>
 			)}
 
-			<label className="visually-hidden" htmlFor="filename">File name</label>
+			<label className="visually-hidden" htmlFor="filename">
+				File name
+			</label>
 			<input
 				required
 				id="filename"
@@ -61,15 +63,7 @@ function DownloadPDFCard({ customs, CV }) {
 				}}
 			/>
 
-			<Button
-				type="submit"
-				text="Download"
-				styles={{
-					backgroundColor: "#187FF5",
-					border: "none",
-					color: "#FFF",
-				}}
-			/>
+			<ActionButton>Download</ActionButton>
 		</form>
 	);
 }
