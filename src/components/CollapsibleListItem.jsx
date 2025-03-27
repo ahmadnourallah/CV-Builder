@@ -5,7 +5,6 @@ import "../styles/collapsibleListItem.css";
 
 function CollapsibleListItem({
 	item,
-	itemIndex,
 	index,
 	fieldKey,
 	setMessage,
@@ -18,7 +17,7 @@ function CollapsibleListItem({
 			role="button"
 			onKeyDown={handleEnter}
 			onClick={() => {
-				setMessage({ itemID: item.id, itemIndex });
+				setMessage({ itemID: item.id });
 				switchNext(index);
 			}}
 			tabIndex={0}

@@ -19,7 +19,6 @@ function CollapsibleList({
 					<CollapsibleListItem
 						key={itemIndex}
 						item={item}
-						itemIndex={itemIndex}
 						index={index}
 						fieldKey={fieldKey}
 						setMessage={setMessage}
@@ -33,7 +32,7 @@ function CollapsibleList({
 				<AddButton
 					className="addBtn"
 					onClick={() => {
-						setMessage({ itemID: null, itemIndex: null });
+						setMessage({ itemID: null });
 						switchNext(index);
 					}}
 					iconPath={mdiPlus}
