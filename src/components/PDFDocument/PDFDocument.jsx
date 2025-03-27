@@ -1,3 +1,5 @@
+import NotoSansRegular from "../../assets/fonts/NotoSans-Regular.woff";
+import NotoSansBold from "../../assets/fonts/NotoSans-Bold.woff";
 import Header from "./Header";
 import Body from "./Body";
 import { Document, Page, StyleSheet, Font } from "@react-pdf/renderer";
@@ -5,12 +7,12 @@ import { Document, Page, StyleSheet, Font } from "@react-pdf/renderer";
 export const PDFDocument = ({ customs, CV }) => {
 	Font.register({
 		family: "NotoSans",
-		src: "../assets/fonts/NotoSans-Regular.woff",
+		src: NotoSansRegular,
 	});
 
 	Font.register({
 		family: "NotoSans-Bold",
-		src: "../assets/fonts/NotoSans-Bold.woff",
+		src: NotoSansBold,
 	});
 
 	const styles = StyleSheet.create({
