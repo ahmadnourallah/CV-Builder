@@ -1,9 +1,13 @@
-import Collapsible from "./Collapsible";
-import { mdiInformationBox, mdiSchool, mdiBriefcaseVariant } from "@mdi/js";
 import { useState } from "react";
+import { mdiInformationBox, mdiSchool, mdiBriefcaseVariant } from "@mdi/js";
 import DownloadPDFCard from "./DownloadPDFCard";
+import PersonalForm from "./PersonalForm";
+import Collapsible from "./Collapsible";
+import Switcher from "./Switcher";
+import CollapsibleList from "./CollapsibleList";
+import CollapsibleForm from "./CollapsibleForm";
 
-function Aside({ customs, setCustoms, CV, setCV }) {
+function Aside({ customs, CV, setCV }) {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	return (
@@ -22,7 +26,9 @@ function Aside({ customs, setCustoms, CV, setCV }) {
 				index={0}
 				activeIndex={activeIndex}
 				setActiveIndex={setActiveIndex}
-			></Collapsible>
+			>
+				<PersonalForm CV={CV} setCV={setCV} />
+			</Collapsible>
 
 			<Collapsible
 				index={1}
@@ -30,7 +36,21 @@ function Aside({ customs, setCustoms, CV, setCV }) {
 				activeIndex={activeIndex}
 				setActiveIndex={setActiveIndex}
 				title="Education"
-			></Collapsible>
+			>
+				<Switcher>
+					<CollapsibleList
+						CV={CV}
+						setCV={setCV}
+						fieldKey="education"
+						buttonLabel="Education"
+					/>
+					<CollapsibleForm
+						fieldKey="education"
+						CV={CV}
+						setCV={setCV}
+					/>
+				</Switcher>
+			</Collapsible>
 
 			<Collapsible
 				index={2}
@@ -38,7 +58,22 @@ function Aside({ customs, setCustoms, CV, setCV }) {
 				activeIndex={activeIndex}
 				setActiveIndex={setActiveIndex}
 				title="Experience"
-			></Collapsible>
+			>
+				<Switcher>
+					<CollapsibleList
+						CV={CV}
+						setCV={setCV}
+						fieldKey="experience"
+						buttonLabel="Experience"
+					/>
+					<CollapsibleForm
+						fieldKey="experience"
+						CV={CV}
+						setCV={setCV}
+						showDescriptionField={true}
+					/>
+				</Switcher>
+			</Collapsible>
 		</aside>
 	);
 }
