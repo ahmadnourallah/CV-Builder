@@ -1,7 +1,7 @@
-import InputGroup from "./InputGroup";
-import CheckBoxInput from "./CheckBoxInput";
-import ActionButton from "./ActionButton";
-import SecondaryButton from "./SecondaryButton";
+import InputGroup from "../common/InputGroup";
+import CheckBoxInput from "../common/CheckBoxInput";
+import ActionButton from "../common/ActionButton";
+import SecondaryButton from "../common/SecondaryButton";
 import { mdiDelete } from "@mdi/js";
 import { useState, useRef, useEffect } from "react";
 

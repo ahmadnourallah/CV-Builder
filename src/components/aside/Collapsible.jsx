@@ -1,8 +1,8 @@
 import Icon from "@mdi/react";
 import { mdiChevronDown } from "@mdi/js";
 import { useEffect, useRef, useState } from "react";
-import { handleEnter } from "../utils/keyboard";
-import "../styles/collapsible.css";
+import { handleEnter } from "../../utils/keyboard";
+import "../../styles/collapsible.css";
 
 function Collapsible({
 	title,

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useImmer } from "use-immer";
-import Aside from "./components/Aside";
-import Canvas from "./components/Canvas";
+import Aside from "./components/aside/Aside";
+import Canvas from "./components/canvas/Canvas";
 import customsData from "./config/customs.json";
 import exampleData from "./config/example.json";
 

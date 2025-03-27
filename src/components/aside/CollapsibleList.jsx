@@ -1,7 +1,7 @@
 import CollapsibleListItem from "./CollapsibleListItem";
-import AddButton from "./AddButton";
+import AddButton from "../common/AddButton";
 import { mdiPlus } from "@mdi/js";
-import "../styles/collapsibleList.css";
+import "../../styles/collapsibleList.css";
 
 function CollapsibleList({
 	fieldKey,

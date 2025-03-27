@@ -1,9 +1,9 @@
 import { wrap } from "comlink";
 import { saveAs } from "file-saver";
 import { useState } from "react";
-import ActionButton from "./ActionButton";
-import Spinner from "./Spinner";
-import Worker from "../workers/renderPDF.worker?worker";
+import ActionButton from "../common/ActionButton";
+import Spinner from "../common/Spinner";
+import Worker from "../../workers/renderPDF.worker?worker";
 
 function DownloadPDFCard({ customs, CV }) {
 	const [isDownloading, setIsDownloading] = useState(false);

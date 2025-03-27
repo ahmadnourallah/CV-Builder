@@ -1,7 +1,7 @@
 import { mdiEyeOutline, mdiEyeOffOutline } from "@mdi/js";
-import { handleEnter } from "../utils/keyboard";
+import { handleEnter } from "../../utils/keyboard";
 import Icon from "@mdi/react";
-import "../styles/collapsibleListItem.css";
+import "../../styles/collapsibleListItem.css";
 
 function CollapsibleListItem({
 	item,

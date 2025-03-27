@@ -3,7 +3,7 @@ import { mdiInformationBox, mdiSchool, mdiBriefcaseVariant } from "@mdi/js";
 import DownloadPDFCard from "./DownloadPDFCard";
 import PersonalForm from "./PersonalForm";
 import Collapsible from "./Collapsible";
-import Switcher from "./Switcher";
+import Switcher from "../common/Switcher";
 import CollapsibleList from "./CollapsibleList";
 import CollapsibleForm from "./CollapsibleForm";
 

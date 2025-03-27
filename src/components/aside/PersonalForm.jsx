@@ -1,4 +1,4 @@
-import InputGroup from "./InputGroup";
+import InputGroup from "../common/InputGroup";
 
 function PersonalForm({ CV, setCV }) {
 	return (

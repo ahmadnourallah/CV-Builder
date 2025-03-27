@@ -1,4 +1,4 @@
-import "../styles/checkBoxInput.css";
+import "../../styles/checkBoxInput.css";
 
 function CheckBoxInput({ label, onChange, checked }) {
 	const id = crypto.randomUUID();
