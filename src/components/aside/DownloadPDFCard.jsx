@@ -31,7 +31,7 @@ function DownloadPDFCard({ customs, CV }) {
 		>
 			{isDownloading && (
 				<div
-					class="overlay"
+					className="overlay"
 					style={{
 						position: "absolute",
 						display: "grid",
