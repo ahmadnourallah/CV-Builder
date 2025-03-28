@@ -139,7 +139,7 @@ h3 {
 
 .container {
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 1fr 1.7fr;
 	gap: var(--gap-lg);
 }
 
