@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { cloneElement, useState } from "react";
 
-function Switcher({ children }) {
+function Switcher({ children, externalIndex }) {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [message, setMessage] = useState(null);
+
+	useEffect(() => {
+		if (externalIndex !== undefined) setActiveIndex(externalIndex);
+	}, [externalIndex]);
 
 	const switchNext = (currentIndex) => {
 		const nextIndex =
@@ -17,11 +22,11 @@ function Switcher({ children }) {
 	};
 
 	return (
-		<div className="switcher">
+		<>
 			{children.map((child, index) => {
 				if (activeIndex === index) {
 					return (
-						<div key={index} className="switcherItem">
+						<>
 							{cloneElement(child, {
 								switchNext,
 								switchBack,
@@ -30,11 +35,11 @@ function Switcher({ children }) {
 								message,
 								setMessage,
 							})}
-						</div>
+						</>
 					);
 				}
 			})}
-		</div>
+		</>
 	);
 }
 
