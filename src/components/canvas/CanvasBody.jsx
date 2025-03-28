@@ -17,17 +17,6 @@ function CanvasBody({ CV }) {
 				title="Professional Experience"
 				items={CV.experience}
 			/>
-
-			<style>
-				{`
-					@media (width <= 700px) {
-						.canvasSection .body .item {
-							grid-template-columns: 1fr !important;
-							gap: var(--gap-md);
-						}
-					}					
-				`}
-			</style>
 		</div>
 	);
 }

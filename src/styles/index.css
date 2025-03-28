@@ -143,8 +143,18 @@ h3 {
 	gap: var(--gap-lg);
 }
 
-@media (width <= 700px) {
+@media (width <= 850px) {
 	.container {
 		grid-template-columns: 1fr;
+	}
+
+	.canvasSection .body .item {
+		grid-template-columns: 1fr !important;
+		gap: var(--gap-md);
+	}
+
+	.asideColumns {
+		flex-direction: column;
+		gap: var(--gap-lg) !important;
 	}
 }
