@@ -1,7 +1,8 @@
+import { useId } from "react";
 import "../../styles/checkBoxInput.css";
 
 function CheckBoxInput({ label, onChange, checked }) {
-	const id = crypto.randomUUID();
+	const id = useId();
 
 	return (
 		<div className="checkboxInput">

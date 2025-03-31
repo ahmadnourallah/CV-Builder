@@ -1,7 +1,7 @@
-import { cloneElement } from "react";
+import { useId, cloneElement } from "react";
 
 function InputGroup({ label, tip, children }) {
-	const id = crypto.randomUUID();
+	const id = useId();
 
 	return (
 		<div
