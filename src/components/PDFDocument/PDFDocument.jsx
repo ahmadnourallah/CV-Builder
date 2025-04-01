@@ -24,11 +24,11 @@ export const PDFDocument = ({ customs, CV }) => {
 		},
 		h1: {
 			fontFamily: "NotoSans-Bold",
-			fontSize: customs.FontLG,
+			fontSize: customs.CVFontLG,
 		},
 		h2: {
 			fontFamily: "NotoSans-Bold",
-			fontSize: customs.FontSM,
+			fontSize: customs.CVFontSM,
 		},
 	});
 

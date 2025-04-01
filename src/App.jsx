@@ -13,11 +13,17 @@ function App() {
 		<>
 			<style>
 				{`:root {
-					--grey-clr: ${customs.GreyClr};
-					--outline-clr: ${customs.OutlineClr};
+					--cv-layout: ${customs.CVLayout};
 					--cv-accent-clr: ${customs.CVAccentClr};
 					--cv-font: ${customs.CVFont};
 					--cv-font-bold: ${customs.CVFontBold};
+					--cv-font-lg: ${customs.CVFontLG};
+					--cv-font-md: ${customs.CVFontMD};
+					--cv-font-sm: ${customs.CVFontSM};
+					--grey-clr: ${customs.GreyClr};
+					--outline-clr: ${customs.OutlineClr};
+					--font: ${customs.Font};
+					--font-bold: ${customs.FontBold};
 					--font-lg: ${customs.FontLG};
 					--font-md: ${customs.FontMD};
 					--font-sm: ${customs.FontSM};

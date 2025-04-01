@@ -10,7 +10,7 @@ function Canvas({ CV }) {
 				flexDirection: "var(--cv-layout)",
 				maxWidth: "8.27in",
 				minHeight: "11.67in",
-				fontSize: "var(--font-body)",
+				fontSize: "var(--cv-font-body)",
 				backgroundColor: "#FFF",
 			}}
 		>
