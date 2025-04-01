@@ -4,10 +4,10 @@ function SectionItem({ customs, item }) {
 	return (
 		<View
 			className="item"
-			wrap={false}
 			style={{
 				display: "flex",
 				flexDirection: "row",
+				gap: customs.GapSM,
 			}}
 		>
 			<View className="leftCol" style={{ flex: 1 }}>

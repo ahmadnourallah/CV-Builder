@@ -13,6 +13,7 @@ function CanvasHeader({ CV }) {
 				gap: "var(--gap-md)",
 				justifyContent: "center",
 				alignItems: "center",
+				textAlign: "center",
 				padding: "var(--gap-lg)",
 			}}
 		>

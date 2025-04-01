@@ -3,6 +3,8 @@ import { View, Text } from "@react-pdf/renderer";
 import { mdiEmail, mdiPhone, mdiMapMarker } from "@mdi/js";
 
 function Header({ customs, styles, CV }) {
+	const isRow = customs.CVLayout !== "column";
+
 	return (
 		<View
 			className="header"
@@ -14,6 +16,9 @@ function Header({ customs, styles, CV }) {
 				gap: customs.GapMD,
 				justifyContent: "center",
 				alignItems: "center",
+				textAlign: "center",
+				width: isRow ? "445pt" : undefined,
+				height: isRow ? "100vh" : undefined,
 				padding: customs.GapLG,
 				marginTop: `-${customs.GapLG}`,
 			}}
@@ -26,6 +31,7 @@ function Header({ customs, styles, CV }) {
 				style={{
 					display: "flex",
 					flexDirection: "row",
+					flexWrap: "wrap",
 					justifyContent: "center",
 					columnGap: customs.GapLG,
 					rowGap: customs.GapMD,

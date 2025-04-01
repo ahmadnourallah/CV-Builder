@@ -2,7 +2,7 @@ import NotoSansRegular from "../../assets/fonts/NotoSans-Regular.woff";
 import NotoSansBold from "../../assets/fonts/NotoSans-Bold.woff";
 import Header from "./Header";
 import Body from "./Body";
-import { Document, Page, StyleSheet, Font } from "@react-pdf/renderer";
+import { Document, Page, StyleSheet, Font, View } from "@react-pdf/renderer";
 
 export const PDFDocument = ({ customs, CV }) => {
 	Font.register({
@@ -19,7 +19,6 @@ export const PDFDocument = ({ customs, CV }) => {
 		page: {
 			margin: 0,
 			paddingTop: customs.GapLG,
-			paddingBottom: customs.GapLG,
 			fontFamily: "NotoSans",
 			fontSize: customs.FontBody,
 		},
@@ -40,8 +39,7 @@ export const PDFDocument = ({ customs, CV }) => {
 				style={{
 					...styles.page,
 					display: "flex",
-					flexDirection: "column",
-					gap: customs.GapLG,
+					flexDirection: customs.CVLayout,
 				}}
 			>
 				<Header customs={customs} CV={CV} styles={styles} />

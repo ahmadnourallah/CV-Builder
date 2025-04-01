@@ -8,6 +8,7 @@ function CanvasHeaderItem({ icon, text }) {
 				display: "flex",
 				alignItems: "center",
 				gap: "var(--gap-sm)",
+				width: "max-content",
 			}}
 		>
 			<Icon path={icon} size="20px" color="#FFF" />

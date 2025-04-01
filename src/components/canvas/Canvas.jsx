@@ -7,8 +7,7 @@ function Canvas({ CV }) {
 			className="canvas shadow"
 			style={{
 				display: "flex",
-				flexDirection: "column",
-				gap: "var(--gap-lg)",
+				flexDirection: "var(--cv-layout)",
 				maxWidth: "8.27in",
 				minHeight: "11.67in",
 				fontSize: "var(--font-body)",
