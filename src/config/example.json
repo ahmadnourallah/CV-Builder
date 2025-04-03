@@ -7,6 +7,15 @@
 		{
 			"id": 0,
 			"isVisible": true,
+			"name": "London City University",
+			"field": "Bachelor's in Economics",
+			"startDate": "2020-08",
+			"endDate": "present",
+			"location": "New York City, US"
+		},
+		{
+			"id": 1,
+			"isVisible": false,
 			"name": "Hidden University",
 			"field": "Master's Degree in Math",
 			"startDate": "2020-08",
