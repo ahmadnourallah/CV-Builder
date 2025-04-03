@@ -1,0 +1,37 @@
+.colorInput {
+	display: flex;
+	gap: var(--gap-sm);
+	align-items: center;
+}
+
+.colorInput input[type="color"] {
+	appearance: none;
+	box-shadow: none;
+	background-color: transparent;
+	padding: 0;
+	border: none;
+	border-radius: 50%;
+	width: 43px;
+	height: 45px;
+}
+
+.colorInput input[type="color"]:focus {
+	outline: none;
+}
+
+.colorInput input[type="color"]::-webkit-color-swatch-wrapper {
+	background-color: transparent;
+	border-radius: 50%;
+	width: 43px;
+	height: 45px;
+}
+
+.colorInput input[type="color"]::-webkit-color-swatch {
+	border: none;
+	border-radius: 50%;
+}
+
+.colorInput input[type="color"]:focus-visible::-webkit-color-swatch {
+	outline: 2px solid var(--outline-clr);
+	outline-offset: 1px;
+}
