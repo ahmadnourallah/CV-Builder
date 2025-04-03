@@ -7,6 +7,9 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
+}
+
+.addBtnWrapper:not(:only-child) {
 	margin-top: 1rem;
 }
 

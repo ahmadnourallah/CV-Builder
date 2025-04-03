@@ -14,19 +14,21 @@ function CollapsibleList({
 }) {
 	return (
 		<div className="collapsibleList">
-			<ul>
-				{CV[fieldKey].map((item, itemIndex) => (
-					<CollapsibleListItem
-						key={itemIndex}
-						item={item}
-						index={index}
-						fieldKey={fieldKey}
-						setMessage={setMessage}
-						setCV={setCV}
-						switchNext={switchNext}
-					/>
-				))}
-			</ul>
+			{CV[fieldKey].length > 0 && (
+				<ul>
+					{CV[fieldKey].map((item, itemIndex) => (
+						<CollapsibleListItem
+							key={itemIndex}
+							item={item}
+							index={index}
+							fieldKey={fieldKey}
+							setMessage={setMessage}
+							setCV={setCV}
+							switchNext={switchNext}
+						/>
+					))}
+				</ul>
+			)}
 
 			<div className="addBtnWrapper">
 				<AddButton
