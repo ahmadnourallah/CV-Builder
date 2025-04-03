@@ -51,7 +51,7 @@ button {
 	cursor: pointer;
 }
 
-input:not([type="checkbox"]),
+input:not([type="checkbox"]):not([type="color"]),
 textarea {
 	outline: none;
 	border-width: 2px;
