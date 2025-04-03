@@ -5,7 +5,7 @@ function CanvasBody({ CV }) {
 		<div
 			className="canvasBody"
 			style={{
-				marginInline: "3rem",
+				marginInline: "5vw",
 				display: "flex",
 				flexDirection: "column",
 				gap: "var(--gap-lg)",

@@ -6,9 +6,11 @@ function CanvasHeaderItem({ icon, text }) {
 			className="item"
 			style={{
 				display: "flex",
+				justifyContent: "center",
 				alignItems: "center",
-				gap: "var(--gap-sm)",
-				width: "max-content",
+				flexWrap: "wrap",
+				rowGap: "var(--gap-lg)",
+				columnGap: "var(--gap-sm)",
 			}}
 		>
 			<Icon path={icon} size="20px" color="#FFF" />

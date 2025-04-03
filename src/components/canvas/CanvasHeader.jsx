@@ -15,9 +15,13 @@ function CanvasHeader({ CV }) {
 				alignItems: "center",
 				textAlign: "center",
 				padding: "var(--gap-lg)",
+				wordBreak: "break-word",
+				minWidth: "40%",
 			}}
 		>
-			<h1 className="name">{CV.name}</h1>
+			<h1 className="name" style={{ fontSize: "calc(20px + 1vw)" }}>
+				{CV.name}
+			</h1>
 			<div
 				className="personal"
 				style={{
