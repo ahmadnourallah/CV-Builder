@@ -1,13 +1,11 @@
 import { useState } from "react";
-import { mdiInformationBox, mdiSchool, mdiBriefcaseVariant } from "@mdi/js";
-import DownloadPDFCard from "./DownloadPDFCard";
-import PersonalForm from "./PersonalForm";
-import Collapsible from "./Collapsible";
 import Switcher from "../common/Switcher";
-import CollapsibleList from "./CollapsibleList";
-import CollapsibleForm from "./CollapsibleForm";
+import CollapsibleGroup from "./CollapsibleGroup";
+import DownloadPDFCard from "./DownloadPDFCard";
+import AsideSwitchPanel from "./AsideSwitchPanel";
+import CustomizationGroup from "./CustomizationGroup";
 
-function Aside({ customs, CV, setCV }) {
+function Aside({ customs, setCustoms, CV, setCV }) {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	return (
@@ -20,60 +18,26 @@ function Aside({ customs, CV, setCV }) {
 		>
 			<DownloadPDFCard customs={customs} CV={CV} />
 
-			<Collapsible
-				title="Personal Details"
-				icon={mdiInformationBox}
-				index={0}
-				activeIndex={activeIndex}
-				setActiveIndex={setActiveIndex}
+			<div
+				className="asideColumns"
+				style={{
+					display: "flex",
+					gap: "calc(var(--gap-md) + var(--gap-sm))",
+				}}
 			>
-				<PersonalForm CV={CV} setCV={setCV} />
-			</Collapsible>
+				<AsideSwitchPanel
+					activeIndex={activeIndex}
+					setActiveIndex={setActiveIndex}
+				/>
 
-			<Collapsible
-				index={1}
-				icon={mdiSchool}
-				activeIndex={activeIndex}
-				setActiveIndex={setActiveIndex}
-				title="Education"
-			>
-				<Switcher>
-					<CollapsibleList
-						CV={CV}
-						setCV={setCV}
-						fieldKey="education"
-						buttonLabel="Education"
-					/>
-					<CollapsibleForm
-						fieldKey="education"
-						CV={CV}
-						setCV={setCV}
+				<Switcher externalIndex={activeIndex}>
+					<CollapsibleGroup CV={CV} setCV={setCV} />
+					<CustomizationGroup
+						customs={customs}
+						setCustoms={setCustoms}
 					/>
 				</Switcher>
-			</Collapsible>
-
-			<Collapsible
-				index={2}
-				icon={mdiBriefcaseVariant}
-				activeIndex={activeIndex}
-				setActiveIndex={setActiveIndex}
-				title="Experience"
-			>
-				<Switcher>
-					<CollapsibleList
-						CV={CV}
-						setCV={setCV}
-						fieldKey="experience"
-						buttonLabel="Experience"
-					/>
-					<CollapsibleForm
-						fieldKey="experience"
-						CV={CV}
-						setCV={setCV}
-						showDescriptionField={true}
-					/>
-				</Switcher>
-			</Collapsible>
+			</div>
 		</aside>
 	);
 }
