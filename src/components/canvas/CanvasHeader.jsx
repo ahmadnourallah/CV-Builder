@@ -1,7 +1,7 @@
 import { mdiEmail, mdiPhone, mdiMapMarker } from "@mdi/js";
 import CanvasHeaderItem from "./CanvasHeaderItem";
 
-function CanvasHeader({ CV }) {
+function CanvasHeader({ CV, customs }) {
 	return (
 		<div
 			className="header"
@@ -16,7 +16,7 @@ function CanvasHeader({ CV }) {
 				textAlign: "center",
 				padding: "var(--gap-lg)",
 				wordBreak: "break-word",
-				minWidth: "40%",
+				width: customs.CVLayout !== "column" ? "40%" : undefined,
 			}}
 		>
 			<h1 className="name" style={{ fontSize: "calc(20px + 1vw)" }}>

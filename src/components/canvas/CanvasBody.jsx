@@ -1,6 +1,6 @@
 import CanvasSection from "./CanvasSection";
 
-function CanvasBody({ CV }) {
+function CanvasBody({ CV, customs }) {
 	return (
 		<div
 			className="canvasBody"
@@ -11,6 +11,8 @@ function CanvasBody({ CV }) {
 				gap: "var(--gap-lg)",
 				marginBottom: "var(--gap-lg)",
 				marginTop: "var(--gap-lg)",
+				width: customs.CVLayout !== "column" ? "60%" : undefined,
+				wordBreak: "break-word",
 			}}
 		>
 			<CanvasSection title="Education" items={CV.education} />

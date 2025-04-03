@@ -46,7 +46,7 @@ function App() {
 				/>
 
 				<main>
-					<Canvas CV={CV} />
+					<Canvas CV={CV} customs={customs} />
 				</main>
 			</div>
 		</>

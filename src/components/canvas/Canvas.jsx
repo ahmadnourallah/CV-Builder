@@ -1,7 +1,7 @@
 import CanvasHeader from "./CanvasHeader";
 import CanvasBody from "./CanvasBody";
 
-function Canvas({ CV }) {
+function Canvas({ CV, customs }) {
 	return (
 		<div
 			className="canvas shadow"
@@ -14,8 +14,8 @@ function Canvas({ CV }) {
 				backgroundColor: "#FFF",
 			}}
 		>
-			<CanvasHeader CV={CV} />
-			<CanvasBody CV={CV} />
+			<CanvasHeader CV={CV} customs={customs} />
+			<CanvasBody CV={CV} customs={customs} />
 		</div>
 	);
 }
