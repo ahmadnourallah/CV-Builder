@@ -16,7 +16,7 @@ function CollapsibleGroup({ CV, setCV }) {
 				flex: 1,
 				display: "flex",
 				flexDirection: "column",
-				gap: "var(--gap-lg)",
+				gap: "1rem",
 			}}
 		>
 			<Collapsible

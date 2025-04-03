@@ -1,0 +1,58 @@
+.asideSwitchPanel {
+	padding: var(--gap-md);
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	gap: var(--gap-md);
+	font-family: var(--font-bold);
+	font-size: 14px;
+}
+
+.asideSwitchPanel button {
+	background-color: transparent;
+	position: relative;
+	padding: var(--gap-md) var(--gap-sm);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--gap-sm);
+	border-radius: 10px;
+}
+
+.asideSwitchPanel button[data-active]::after {
+	content: "";
+	position: absolute;
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgb(0, 0, 0, 0.05);
+}
+
+.asideSwitchPanel .contentBtn[data-active]::after {
+	animation: 150ms slide-up linear forwards;
+}
+
+.asideSwitchPanel .customizeBtn[data-active]::after {
+	animation: 150ms slide-down linear forwards;
+}
+
+@keyframes slide-down {
+	0% {
+		transform: translateY(-100%);
+	}
+
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@keyframes slide-up {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}

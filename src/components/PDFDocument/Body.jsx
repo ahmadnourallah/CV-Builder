@@ -12,8 +12,8 @@ function Body({ customs, styles, CV }) {
 				width: isRow ? "100%" : undefined,
 				display: "flex",
 				flexDirection: "column",
-				gap: customs.GapLG,
-				marginTop: !isRow ? customs.GapLG : undefined,
+				gap: customs.CVGapLG,
+				marginTop: !isRow ? customs.CVGapLG : undefined,
 			}}
 		>
 			<Section

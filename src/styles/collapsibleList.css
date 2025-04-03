@@ -7,7 +7,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	margin-top: var(--gap-lg);
+	margin-top: 1rem;
 }
 
 .addBtn:focus-visible {

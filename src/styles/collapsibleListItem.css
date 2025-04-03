@@ -6,7 +6,7 @@
 	font-size: var(--font-sm);
 	cursor: pointer;
 	border-top: 5px solid var(--grey-clr);
-	padding: calc(var(--gap-md) * 2);
+	padding: 1rem calc(var(--gap-md) * 2);
 	transition: background-color 150ms;
 }
 

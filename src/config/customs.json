@@ -8,13 +8,16 @@
 	"CVFontLG": "24pt",
 	"CVFontMD": "18pt",
 	"CVFontSM": "13.5pt",
+	"CVGapLG": "24pt",
+	"CVGapMD": "7.5pt",
+	"CVGapSM": "4pt",
 	"Font": "\"NotoSans\", sans-serif",
 	"FontBold": "\"NotoSans-Bold\", sans-serif",
-	"FontLG": "24pt",
-	"FontMD": "18pt",
-	"FontSM": "13.5pt",
-	"FontBody": "12pt",
-	"GapLG": "24pt",
-	"GapMD": "7.5pt",
-	"GapSM": "4pt"
+	"FontLG": "2rem",
+	"FontMD": "1.5rem",
+	"FontSM": "1.1rem",
+	"FontBody": "1rem",
+	"GapLG": "calc(5px + 1vw)",
+	"GapMD": "calc(2px + .8vw)",
+	"GapSM": "calc(1px + .5vw)"
 }

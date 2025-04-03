@@ -7,7 +7,7 @@ function SectionItem({ customs, item }) {
 			style={{
 				display: "flex",
 				flexDirection: "row",
-				gap: customs.GapSM,
+				gap: customs.CVGapSM,
 			}}
 		>
 			<View className="leftCol" style={{ flex: 1 }}>
@@ -24,7 +24,7 @@ function SectionItem({ customs, item }) {
 				<Text className="name" style={{ fontFamily: "NotoSans-Bold" }}>
 					{item.name}
 				</Text>
-				<Text className="field" style={{ marginBottom: customs.GapMD }}>
+				<Text className="field" style={{ marginBottom: customs.CVGapMD }}>
 					{item.field}
 				</Text>
 				{item.description && (

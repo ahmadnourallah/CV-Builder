@@ -8,7 +8,7 @@ function HeaderItem({ customs, iconPath, text }) {
 				display: "flex",
 				flexDirection: "row",
 				alignItems: "center",
-				gap: customs.GapSM,
+				gap: customs.CVGapSM,
 			}}
 		>
 			<Svg

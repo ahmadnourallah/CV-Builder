@@ -20,6 +20,9 @@ function App() {
 					--cv-font-lg: ${customs.CVFontLG};
 					--cv-font-md: ${customs.CVFontMD};
 					--cv-font-sm: ${customs.CVFontSM};
+					--cv-gap-lg: ${customs.CVGapLG};
+					--cv-gap-md: ${customs.CVGapMD};
+					--cv-gap-sm: ${customs.CVGapSM};
 					--grey-clr: ${customs.GreyClr};
 					--outline-clr: ${customs.OutlineClr};
 					--font: ${customs.Font};

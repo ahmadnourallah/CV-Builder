@@ -13,14 +13,14 @@ function Header({ customs, styles, CV }) {
 				color: "#fff",
 				display: "flex",
 				flexDirection: "column",
-				gap: customs.GapMD,
+				gap: customs.CVGapMD,
 				justifyContent: "center",
 				alignItems: "center",
 				textAlign: "center",
 				width: isRow ? "445pt" : undefined,
 				height: isRow ? "100vh" : undefined,
-				padding: customs.GapLG,
-				marginTop: `-${customs.GapLG}`,
+				padding: customs.CVGapLG,
+				marginTop: `-${customs.CVGapLG}`,
 			}}
 		>
 			<Text className="name" style={styles.h1}>
@@ -33,8 +33,8 @@ function Header({ customs, styles, CV }) {
 					flexDirection: "row",
 					flexWrap: "wrap",
 					justifyContent: "center",
-					columnGap: customs.GapLG,
-					rowGap: customs.GapMD,
+					columnGap: customs.CVGapLG,
+					rowGap: customs.CVGapMD,
 				}}
 			>
 				{CV.email && (

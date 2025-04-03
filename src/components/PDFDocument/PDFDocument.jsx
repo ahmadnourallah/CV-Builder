@@ -18,7 +18,7 @@ export const PDFDocument = ({ customs, CV }) => {
 	const styles = StyleSheet.create({
 		page: {
 			margin: 0,
-			paddingTop: customs.GapLG,
+			paddingTop: customs.CVGapLG,
 			fontFamily: "NotoSans",
 			fontSize: customs.FontBody,
 		},

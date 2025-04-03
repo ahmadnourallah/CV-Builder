@@ -24,7 +24,7 @@ function CanvasSection({ title, items }) {
 					style={{
 						display: "flex",
 						flexDirection: "column",
-						gap: "var(--gap-lg)",
+						gap: "2rem",
 					}}
 				>
 					{items.map((item, index) => {

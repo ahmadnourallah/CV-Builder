@@ -9,8 +9,8 @@ function InputGroup({ label, tip, children }) {
 			style={{
 				display: "flex",
 				flexDirection: "column",
-				gap: "var(--gap-md)",
-				marginBottom: "var(--gap-md)",
+				gap: ".5rem",
+				marginBottom: "1rem",
 			}}
 		>
 			<label

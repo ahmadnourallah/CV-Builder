@@ -11,11 +11,11 @@ function Section({ customs, styles, title, items }) {
 					className="title"
 					style={{
 						...styles.h2,
-						padding: customs.GapSM,
+						padding: customs.CVGapSM,
 						textAlign: "center",
 						color: customs.CVAccentClr,
 						backgroundColor: customs.GreyClr,
-						marginBottom: customs.GapMD,
+						marginBottom: customs.CVGapMD,
 						borderRadius: "2px",
 					}}
 				>
@@ -26,7 +26,7 @@ function Section({ customs, styles, title, items }) {
 					style={{
 						display: "flex",
 						flexDirection: "column",
-						gap: customs.GapLG,
+						gap: customs.CVGapLG,
 					}}
 				>
 					{items.map((item) => {
